@@ -58,8 +58,6 @@ func getPointsHandler(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	receiptID := vars["id"]
 
-	// Look up receiptID in in-memory data structure or database
-	// Calculate and retrieve the points for the receiptID
 	points := calculatePoints(receiptID)
 
 	pointsResponse := PointsResponse{
@@ -86,9 +84,7 @@ func main() {
 }
 
 func calculatePoints(receiptID string) int {
-	// Look up receiptID in in-memory data structure or database
-	// Calculate and return the points for the receiptID
-	return 32 // Replace with your logic to get the points for the receiptID
+	return 32
 }
 
 func generateID() string {
